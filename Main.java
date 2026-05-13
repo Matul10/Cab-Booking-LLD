@@ -34,6 +34,7 @@ public class Main {
         uber.completeTrip(rahulTrip);
         chanchalTrip = uber.createTrip("ITPL","Indiranagar",chanchal,DriverLookupStrategy.DEFAULT,PricingStrategy.DEFAULT,11.4);
 
+        uber.printRecentTrips(10);
 
     }
 }

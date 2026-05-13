@@ -34,10 +34,11 @@ public class Driver {
         return available.get();
     }
 
-    public void markAvailable() {
-        this.available.compareAndSet(false,true);
+    public boolean markAvailable() {
+        return this.available.compareAndSet(false,true);
     }
-    public void markUnavailable() {
-        this.available.compareAndSet(true,false);
+
+    public boolean tryAndReserve() {
+        return this.available.compareAndSet(true,false);
     }
 }

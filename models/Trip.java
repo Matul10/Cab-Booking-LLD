@@ -57,6 +57,10 @@ public class Trip {
         return pricingStrategy;
     }
 
+    public Double getFare() {
+        return fare;
+    }
+
     public Driver getDriver() {
         return driver;
     }

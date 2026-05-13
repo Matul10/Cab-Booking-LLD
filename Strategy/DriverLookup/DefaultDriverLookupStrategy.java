@@ -11,9 +11,8 @@ public class DefaultDriverLookupStrategy implements LookupStrategy{
         for(Map.Entry<Integer,Driver> entry : drivers.entrySet()){
             int id = entry.getKey();
             Driver curDriver = entry.getValue();
-            if(curDriver.getAvailable()){
+            if(curDriver.tryAndReserve()){
                 driver = curDriver;
-                driver.markUnavailable();
                 break;
             }
         }
